@@ -13,3 +13,5 @@ const repoSchema = new Schema(
   },
   { timestamp: true }
 );
+
+module.exports = mongoose.model("Repo", repoSchema);
