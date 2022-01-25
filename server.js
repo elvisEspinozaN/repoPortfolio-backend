@@ -26,3 +26,6 @@ app.use(express.json()); // parses json
 app.get("/testroute", (req, res) => {
   res.send("It works!");
 });
+
+// listener //
+app.listen(PORT, () => console.log(`on ${PORT}`));
