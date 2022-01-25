@@ -21,3 +21,8 @@ mongoose.connection
 app.use(cors()); // prevents a cors err
 app.use(morgan("dev")); // logging
 app.use(express.json()); // parses json
+
+// a simple test route //
+app.get("/testroute", (req, res) => {
+  res.send("It works!");
+});
