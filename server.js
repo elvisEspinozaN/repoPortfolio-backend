@@ -16,3 +16,8 @@ mongoose.connection
   .on("open", () => console.log("mongoDB connected"))
   .on("close", () => console.log("mongoDB disconnected"))
   .on("error", (error) => console.log(error));
+
+// middleware //
+app.use(cors()); // prevents a cors err
+app.use(morgan("dev")); // logging
+app.use(express.json()); // parses json
