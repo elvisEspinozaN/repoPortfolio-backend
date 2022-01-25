@@ -42,3 +42,5 @@ repoRouter.put("/repo/:id", async (req, res) => {
     res.status(400).json(error);
   }
 });
+
+module.ezports = repoRouter;
