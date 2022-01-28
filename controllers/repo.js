@@ -6,7 +6,7 @@ const Repo = require("../models/repo");
 const repoRouter = express.Router();
 
 // index route //
-repoRouter.get("/repo", (req, res) => {
+repoRouter.get("/", (req, res) => {
   try {
     res.json(await Repo.find({}));
   } catch (error) {
