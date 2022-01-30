@@ -8,7 +8,7 @@ const repoSchema = new Schema(
   {
     author: String,
     pName: String,
-    progress: Number,
+    progress: String,
     url: String,
   },
   { timestamp: true }

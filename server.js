@@ -4,6 +4,8 @@ const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 
+const repoRouter = require("./controllers/repo");
+
 const app = express();
 
 require("dotenv").config();
@@ -21,6 +23,8 @@ mongoose.connection
 app.use(cors()); // prevents a cors err
 app.use(morgan("dev")); // logging
 app.use(express.json()); // parses json
+
+app.use("/", repoRouter);
 
 // a simple test route //
 app.get("/testroute", (req, res) => {
