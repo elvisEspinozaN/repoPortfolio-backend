@@ -15,7 +15,7 @@ repoRouter.get("/repo", async (req, res) => {
 });
 
 // delete route //
-repoRouter.get("/repo/:id", async (req, res) => {
+repoRouter.delete("/repo/:id", async (req, res) => {
   try {
     res.json(await Repo.findByIdAndDelete(req.params.id));
   } catch (error) {
